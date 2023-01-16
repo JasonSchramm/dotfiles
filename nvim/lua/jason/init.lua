@@ -1,5 +1,6 @@
 require("jason.remap")
 require("jason.set")
+require('impatient')
 
 -- Set lualine as statusline
 -- See `:help lualine.txt`

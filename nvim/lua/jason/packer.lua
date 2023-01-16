@@ -5,6 +5,10 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
+
+    -- Supposed To Speed Up Nvim
+    use 'lewis6991/impatient.nvim'
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         requires = { {'nvim-lua/plenary.nvim'} }
@@ -82,4 +86,11 @@ return require('packer').startup(function(use)
     -- Rust
     use 'neovim/nvim-lspconfig'
     use 'simrat39/rust-tools.nvim'
+    use 'puremourning/vimspector'
+
+    -- Auto Brackey Pair
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)
